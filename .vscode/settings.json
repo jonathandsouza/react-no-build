@@ -1,0 +1,13 @@
+{
+    "tailwindCSS.files.exclude": [
+        "**/.git/**",
+        "**/.hg/**",
+        "**/.svn/**"
+    ],
+    "files.watcherExclude": {
+        "**/node_modules/*/**": false
+    },
+    "search.exclude": {
+        "**/node_modules": false
+    }
+}
