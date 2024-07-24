@@ -5,16 +5,19 @@ const _jsxs = this.jsxs;
 const _Fragment = this.Fragment;
 
 function Display({
-    count
+    count, onSelect
 }) {
     return /*#__PURE__*/_jsx("h2", {
+        onClick: () => { onSelect(); console.log("hello world!!!") },
         children: count
     });
 }
 
 function App() {
     const [count, setCount] = React.useState(0);
+    debugger;
     React.useEffect(() => {
+        setCount(count => count + 1);
         debugger;
     }, []);
     return /*#__PURE__*/_jsxs(_Fragment, {
@@ -24,7 +27,10 @@ function App() {
             },
             children: "HELLO NO JSX"
         }), " ", /*#__PURE__*/_jsx(Display, {
-            count: count
+            count: count,
+            onSelect: () => {
+                console.log("select clicked");
+            },
         }), " "]
     });
 }
